@@ -4,6 +4,7 @@
 
 layout: home
 ---
+![image](assets/wovenwebbanner.jpg)
 We exist within a vast interconnected web of life. Human society is a web within that web, and as humans we have developed technology that has become a web of it's own. In an ideal world, all of these mutually embedded webs are also mutually supportive, with technology contributing to the connectivity, health, and creativity of human society which in turn contributes to the well-being of our planetary web. Unfortunately, this is the ideal, not the actuality.
 
 Woven Web exists to help address this distortion and support the balance of the web through fostering self-understanding and communication, and through participating in the emergence of a more connected culture in service to all life. When we talk about bringing systems to life, we are looking most directly at our technological systems and our social systems, not only enlivening these systems but bringing them into closer relationship with life and therefore helping them be more in service to the wider web.
