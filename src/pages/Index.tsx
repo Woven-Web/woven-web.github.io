@@ -15,7 +15,9 @@ const Index = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("animate-fade-up");
-          entry.target.style.opacity = "1";
+          if (entry.target instanceof HTMLElement) {
+            entry.target.style.opacity = "1";
+          }
         }
       });
     }, observerOptions);
@@ -39,7 +41,7 @@ const Index = () => {
             Woven Web
           </h1>
           <p className="text-xl md:text-2xl text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-            A creative collaborative supporting relational artists and change-makers in bringing forth a more beautiful and interconnected world
+            Weaving technology and culture to foster open and connected communities
           </p>
         </div>
       </section>
@@ -81,19 +83,19 @@ const Index = () => {
             {[
               {
                 title: "We Gather",
-                description: "Creating spaces for meaningful connections and shared experiences",
+                description: "From hosting fully-produced events to cozy intimate circles in living rooms so much of our work happens through bringing people together",
                 icon: Users,
                 delay: "0s",
               },
               {
                 title: "We Build",
-                description: "Developing sustainable solutions for our community's needs",
+                description: "We develop open-source technology solutions that help networks coordinate more effectively",
                 icon: Puzzle,
                 delay: "0.2s",
               },
               {
                 title: "We Connect",
-                description: "Bridging gaps between technology and human connection",
+                description: "'Have you met X?' is a phrase we say a lot",
                 icon: Globe2,
                 delay: "0.4s",
               },
