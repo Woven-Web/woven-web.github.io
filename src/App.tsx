@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import RichCulture from "./pages/RichCulture";
 import OpenSystems from "./pages/OpenSystems";
-import WorkWithUs from "./pages/WorkWithUs";
+import JoinUs from "./pages/JoinUs";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -28,7 +28,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/rich-culture" element={<RichCulture />} />
               <Route path="/open-systems" element={<OpenSystems />} />
-              <Route path="/work-with-us" element={<WorkWithUs />} />
+              <Route path="/join-us" element={<JoinUs />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
