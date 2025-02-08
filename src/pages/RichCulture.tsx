@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Leaf, Lightbulb, Users, Heart, Map } from "lucide-react";
 
@@ -8,22 +7,16 @@ const RichCulture = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-natural-leaf mb-6">
-            Weaving a rich cultural fabric with deep roots in Boulder County, Colorado
+          <h1 className="text-4xl font-bold text-natural-leaf mb-6">
+            Weaving a rich cultural fabric
           </h1>
-          <p className="text-xl text-natural-earth max-w-3xl mx-auto">
-            We are building relationships throughout the Boulder area with a focus on our core values of Regeneration, Innovation, Cooperation, and Health.
-          </p>
         </div>
 
         {/* Mission Statement */}
-        <div className="bg-natural-sand/5 rounded-2xl p-8 mb-16">
-          <p className="text-lg text-natural-earth">
-            In partnership with other local organizations, we are developing a map of what is happening in our bioregion to help people get connected to what matters, including organizations, gathering locations, volunteer opportunities, events and more.
-          </p>
-          <p className="text-lg text-natural-earth mt-4">
-            We are creating events and other opportunities to gather and helping to seed more collaboration and communication throughout this area.
-          </p>
+        <div className="max-w-3xl mx-auto mb-16 space-y-4 text-natural-earth text-lg text-center">
+          <p>We are building relationships throughout the Boulder area with a focus on our core values of Regeneration, Innovation, Cooperation, and Health.</p>
+          <p>In partnership with other local organizations, we are developing a map of what is happening in our bioregion to help people get connected to what matters.</p>
+          <p>We are creating events and other opportunities to gather and helping to seed more collaboration and communication throughout this area.</p>
         </div>
 
         {/* RICH Framework */}
