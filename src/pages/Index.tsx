@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle } from "lucide-react";
@@ -67,7 +68,7 @@ const Index = () => {
                   <Puzzle size={48} />
                 </div>
                 <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Open Systems</h3>
-                <p className="text-natural-earth">Building transparent and accessible technology solutions for all.</p>
+                <p className="text-natural-earth">Developing technology for an open & connected society</p>
               </div>
             </Link>
           </div>
