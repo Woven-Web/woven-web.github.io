@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle } from "lucide-react";
@@ -59,7 +58,7 @@ const Index = () => {
                   <Users size={48} />
                 </div>
                 <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Rich Culture</h3>
-                <p className="text-natural-earth">Fostering meaningful connections and cultural exchange within our community.</p>
+                <p className="text-natural-earth">Regenerative, Innovative, Cooperative, and Healthy</p>
               </div>
             </Link>
             <Link to="/open-systems" className="group">
