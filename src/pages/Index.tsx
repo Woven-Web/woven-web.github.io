@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle } from "lucide-react";
+import { MycelialBackground } from "@/components/MycelialBackground";
 
 const Index = () => {
   useEffect(() => {
@@ -31,6 +32,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <MycelialBackground />
+      
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center bg-gradient-to-b from-natural-sage/10 to-transparent relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
