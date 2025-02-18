@@ -7,7 +7,7 @@ export const MycelialBackground = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-natural-sage/5 to-transparent" />
       <svg
         className="absolute inset-0 w-full h-full opacity-10"
-        viewBox="0 0 1000 1000"
+        viewBox="0 0 2000 2000"
         preserveAspectRatio="xMidYMid slice"
       >
         <defs>
@@ -25,43 +25,39 @@ export const MycelialBackground = () => {
             />
           </filter>
         </defs>
-        {/* Base layer with slower animation */}
-        <g className="animate-[flow_20s_linear_infinite]">
-          {[...Array(5)].map((_, i) => (
+        {/* Base layer with gentle wiggling */}
+        <g>
+          {[...Array(8)].map((_, i) => (
             <path
               key={`wave-${i}`}
-              d={`M ${-200 + i * 200} 500 
-                 C ${-100 + i * 200} ${400 + Math.sin(i * 30) * 50} 
-                   ${0 + i * 200} ${500 + Math.cos(i * 45) * 50} 
-                   ${100 + i * 200} 500 
-                 C ${200 + i * 200} ${600 + Math.sin(i * 60) * 50} 
-                   ${300 + i * 200} ${500 + Math.cos(i * 45) * 50} 
-                   ${400 + i * 200} 500`}
+              d={`M ${-200} ${200 + i * 250} 
+                 Q ${500} ${150 + i * 250 + Math.sin(i * 45) * 50} 
+                   ${1000} ${200 + i * 250}
+                 Q ${1500} ${250 + i * 250 + Math.cos(i * 45) * 50}
+                   ${2200} ${200 + i * 250}`}
               fill="none"
               stroke="url(#mycelialGradient)"
               strokeWidth="2"
-              className={`animate-[pulse_${8 + i * 2}s_ease-in-out_infinite]`}
-              style={{ animationDelay: `${-i * 2}s` }}
+              className={`animate-[wiggle_${15 + i * 2}s_ease-in-out_infinite]`}
+              style={{ animationDelay: `${-i * 1.5}s` }}
             />
           ))}
         </g>
-        {/* Overlay layer with faster animation */}
-        <g className="animate-[flow_15s_linear_infinite]" style={{ filter: 'url(#gooey)' }}>
-          {[...Array(5)].map((_, i) => (
+        {/* Overlay layer with different timing */}
+        <g style={{ filter: 'url(#gooey)' }}>
+          {[...Array(8)].map((_, i) => (
             <path
               key={`wave-overlay-${i}`}
-              d={`M ${-200 + i * 200} 500 
-                 C ${-100 + i * 200} ${450 + Math.cos(i * 45) * 30} 
-                   ${0 + i * 200} ${500 + Math.sin(i * 30) * 30} 
-                   ${100 + i * 200} 500 
-                 C ${200 + i * 200} ${550 + Math.cos(i * 60) * 30} 
-                   ${300 + i * 200} ${500 + Math.sin(i * 45) * 30} 
-                   ${400 + i * 200} 500`}
+              d={`M ${-200} ${300 + i * 250} 
+                 Q ${500} ${350 + i * 250 + Math.cos(i * 30) * 30} 
+                   ${1000} ${300 + i * 250}
+                 Q ${1500} ${250 + i * 250 + Math.sin(i * 30) * 30}
+                   ${2200} ${300 + i * 250}`}
               fill="none"
               stroke="url(#mycelialGradient)"
               strokeWidth="1.5"
-              className={`animate-[pulse_${6 + i * 2}s_ease-in-out_infinite]`}
-              style={{ animationDelay: `${-i * 1.5}s` }}
+              className={`animate-[wiggle_${20 + i * 2}s_ease-in-out_infinite]`}
+              style={{ animationDelay: `${-i * 2}s` }}
             />
           ))}
         </g>

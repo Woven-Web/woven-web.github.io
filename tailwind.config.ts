@@ -85,9 +85,15 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "flow": {
-          "0%": { transform: "translateX(-50%)" },
-          "100%": { transform: "translateX(0%)" },
+        "wiggle": {
+          "0%, 100%": { 
+            transform: "translateY(0px)",
+            opacity: "0.6"
+          },
+          "50%": { 
+            transform: "translateY(-15px)",
+            opacity: "0.8"
+          },
         },
         "pulse": {
           "0%, 100%": { 
