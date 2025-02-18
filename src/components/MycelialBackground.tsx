@@ -17,7 +17,7 @@ export const MycelialBackground = ({
   secondaryColor = '#496F5D',
   animationSpeed = 'medium',
   density = 'medium',
-  opacity = 0.1,
+  opacity = 0.2, // Increased default opacity from 0.1 to 0.2
 }: MycelialBackgroundProps) => {
   const getAnimationDuration = () => {
     switch (animationSpeed) {
@@ -93,8 +93,8 @@ export const MycelialBackground = ({
               d={generateRandomCurve(i)}
               fill="none"
               stroke={`url(#mycelialGradient)`}
-              strokeWidth="1.5"
-              className="opacity-60"
+              strokeWidth="2.5" // Increased from 1.5 to 2.5
+              className="opacity-70" // Increased from 0.6 to 0.7
               style={{
                 animation: `pulse ${getAnimationDuration()} ease-in-out infinite`,
                 animationDelay: `${-i * 2}s`
@@ -111,8 +111,8 @@ export const MycelialBackground = ({
               d={generateRandomCurve(i + 0.5)}
               fill="none"
               stroke={`url(#mycelialGradient)`}
-              strokeWidth="1"
-              className="opacity-40"
+              strokeWidth="2" // Increased from 1 to 2
+              className="opacity-50" // Increased from 0.4 to 0.5
               style={{
                 animation: `flow ${getAnimationDuration()} ease-in-out infinite`,
                 animationDelay: `${-i * 3}s`

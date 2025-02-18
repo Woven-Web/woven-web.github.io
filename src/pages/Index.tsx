@@ -39,7 +39,7 @@ const Index = () => {
           secondaryColor="#496F5D"
           animationSpeed="medium"
           density="medium"
-          opacity={0.1}
+          opacity={0.2}
         />
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative">
           <h1 className="text-4xl md:text-6xl font-bold text-natural-leaf mb-6 opacity-0 animate-on-scroll">
