@@ -85,27 +85,9 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "wiggle": {
-          "0%": { 
-            transform: "translate(0px, 0px) rotate(0deg)",
-            opacity: "0.5"
-          },
-          "25%": {
-            transform: "translate(-10px, 15px) rotate(-1deg)",
-            opacity: "0.6"
-          },
-          "50%": { 
-            transform: "translate(5px, -10px) rotate(1deg)",
-            opacity: "0.7"
-          },
-          "75%": {
-            transform: "translate(10px, 5px) rotate(-0.5deg)",
-            opacity: "0.6"
-          },
-          "100%": { 
-            transform: "translate(0px, 0px) rotate(0deg)",
-            opacity: "0.5"
-          },
+        "flow": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0%)" },
         },
         "pulse": {
           "0%, 100%": { 
