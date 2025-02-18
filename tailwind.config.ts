@@ -85,20 +85,6 @@ export default {
             transform: "translateY(0)",
           },
         },
-        "wave": {
-          "0%": { 
-            transform: "translateX(-5%) translateY(0)",
-            opacity: "0.8"
-          },
-          "50%": { 
-            transform: "translateX(0%) translateY(2%)",
-            opacity: "1"
-          },
-          "100%": { 
-            transform: "translateX(5%) translateY(0)",
-            opacity: "0.8"
-          }
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
