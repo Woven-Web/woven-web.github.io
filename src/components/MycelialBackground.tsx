@@ -27,37 +27,41 @@ export const MycelialBackground = () => {
         </defs>
         {/* Base layer with gentle wiggling */}
         <g>
-          {[...Array(8)].map((_, i) => (
+          {[...Array(6)].map((_, i) => (
             <path
               key={`wave-${i}`}
-              d={`M ${-200} ${200 + i * 250} 
-                 Q ${500} ${150 + i * 250 + Math.sin(i * 45) * 50} 
-                   ${1000} ${200 + i * 250}
-                 Q ${1500} ${250 + i * 250 + Math.cos(i * 45) * 50}
-                   ${2200} ${200 + i * 250}`}
+              d={`M ${-200 + Math.sin(i * 60) * 400} ${200 + i * 300} 
+                 C ${300 + Math.cos(i * 45) * 200} ${150 + i * 300} 
+                   ${800 + Math.sin(i * 30) * 300} ${400 + i * 300}
+                   ${1200 + Math.cos(i * 45) * 200} ${200 + i * 300}
+                 C ${1600 + Math.sin(i * 60) * 200} ${500 + i * 300}
+                   ${2000 + Math.cos(i * 30) * 300} ${300 + i * 300}
+                   ${2200 + Math.sin(i * 45) * 200} ${400 + i * 300}`}
               fill="none"
               stroke="url(#mycelialGradient)"
-              strokeWidth="2"
-              className={`animate-[wiggle_${15 + i * 2}s_ease-in-out_infinite]`}
-              style={{ animationDelay: `${-i * 1.5}s` }}
+              strokeWidth="1.5"
+              className={`animate-[wiggle_${20 + i * 3}s_ease-in-out_infinite]`}
+              style={{ animationDelay: `${-i * 2}s` }}
             />
           ))}
         </g>
         {/* Overlay layer with different timing */}
         <g style={{ filter: 'url(#gooey)' }}>
-          {[...Array(8)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <path
               key={`wave-overlay-${i}`}
-              d={`M ${-200} ${300 + i * 250} 
-                 Q ${500} ${350 + i * 250 + Math.cos(i * 30) * 30} 
-                   ${1000} ${300 + i * 250}
-                 Q ${1500} ${250 + i * 250 + Math.sin(i * 30) * 30}
-                   ${2200} ${300 + i * 250}`}
+              d={`M ${-200 + Math.cos(i * 45) * 300} ${300 + i * 350} 
+                 C ${400 + Math.sin(i * 30) * 200} ${500 + i * 350}
+                   ${900 + Math.cos(i * 45) * 300} ${200 + i * 350}
+                   ${1300 + Math.sin(i * 60) * 200} ${400 + i * 350}
+                 C ${1700 + Math.cos(i * 30) * 200} ${300 + i * 350}
+                   ${2100 + Math.sin(i * 45) * 300} ${500 + i * 350}
+                   ${2400 + Math.cos(i * 60) * 200} ${200 + i * 350}`}
               fill="none"
               stroke="url(#mycelialGradient)"
-              strokeWidth="1.5"
-              className={`animate-[wiggle_${20 + i * 2}s_ease-in-out_infinite]`}
-              style={{ animationDelay: `${-i * 2}s` }}
+              strokeWidth="1"
+              className={`animate-[wiggle_${25 + i * 4}s_ease-in-out_infinite]`}
+              style={{ animationDelay: `${-i * 3}s` }}
             />
           ))}
         </g>

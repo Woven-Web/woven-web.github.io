@@ -86,13 +86,25 @@ export default {
           },
         },
         "wiggle": {
-          "0%, 100%": { 
-            transform: "translateY(0px)",
+          "0%": { 
+            transform: "translate(0px, 0px) rotate(0deg)",
+            opacity: "0.5"
+          },
+          "25%": {
+            transform: "translate(-10px, 15px) rotate(-1deg)",
             opacity: "0.6"
           },
           "50%": { 
-            transform: "translateY(-15px)",
-            opacity: "0.8"
+            transform: "translate(5px, -10px) rotate(1deg)",
+            opacity: "0.7"
+          },
+          "75%": {
+            transform: "translate(10px, 5px) rotate(-0.5deg)",
+            opacity: "0.6"
+          },
+          "100%": { 
+            transform: "translate(0px, 0px) rotate(0deg)",
+            opacity: "0.5"
           },
         },
         "pulse": {
