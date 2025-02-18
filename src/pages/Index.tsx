@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle } from "lucide-react";
-import { MycelialBackground } from "@/components/MycelialBackground";
 
 const Index = () => {
   useEffect(() => {
@@ -33,14 +32,10 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center relative overflow-hidden">
-        <MycelialBackground 
-          color="#87A878"
-          secondaryColor="#496F5D"
-          animationSpeed="medium"
-          density="medium"
-          opacity={0.2}
-        />
+      <section className="h-screen flex items-center justify-center bg-gradient-to-b from-natural-sage/10 to-transparent relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-natural-sage/20 via-transparent to-transparent animate-pulse" />
+        </div>
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative">
           <h1 className="text-4xl md:text-6xl font-bold text-natural-leaf mb-6 opacity-0 animate-on-scroll">
             Woven Web
