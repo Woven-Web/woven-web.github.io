@@ -85,11 +85,38 @@ export default {
             transform: "translateY(0)",
           },
         },
+        "pulse": {
+          "0%, 100%": {
+            opacity: "0.6",
+            filter: "brightness(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            filter: "brightness(1.2)",
+          },
+        },
+        "flow": {
+          "0%": {
+            strokeDasharray: "0 50",
+            strokeDashoffset: "0",
+            opacity: "0.4",
+          },
+          "50%": {
+            opacity: "0.6",
+          },
+          "100%": {
+            strokeDasharray: "50 0",
+            strokeDashoffset: "50",
+            opacity: "0.4",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.5s ease-out forwards",
+        "pulse": "pulse 3s ease-in-out infinite",
+        "flow": "flow 4s ease-in-out infinite",
       },
     },
   },
