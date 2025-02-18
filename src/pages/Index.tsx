@@ -115,6 +115,31 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Section */}
+      <section className="py-24 bg-natural-sand/5">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-natural-leaf mb-4">Stay Connected</h2>
+            <p className="text-natural-earth">Join our newsletter to stay updated with our latest insights and community developments</p>
+          </div>
+          <div className="rounded-lg overflow-hidden">
+            <iframe 
+              src="https://embeds.beehiiv.com/df7620e6-9c24-4321-a4c3-b7dfa54dacac"
+              data-test-id="beehiiv-embed"
+              width="100%"
+              height="320"
+              style={{
+                border: "2px solid #e5e7eb",
+                borderRadius: "0.5rem",
+                backgroundColor: "transparent"
+              }}
+              frameBorder="0"
+              scrolling="no"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
