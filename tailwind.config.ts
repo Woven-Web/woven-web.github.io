@@ -86,8 +86,18 @@ export default {
           },
         },
         "wave": {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(20px)" },
+          "0%": { 
+            transform: "translateX(-5%) translateY(0)",
+            opacity: "0.8"
+          },
+          "50%": { 
+            transform: "translateX(0%) translateY(2%)",
+            opacity: "1"
+          },
+          "100%": { 
+            transform: "translateX(5%) translateY(0)",
+            opacity: "0.8"
+          }
         },
       },
       animation: {

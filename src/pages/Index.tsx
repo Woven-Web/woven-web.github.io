@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle, Send } from "lucide-react";
@@ -45,17 +44,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Wave Background */}
-      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
-        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="hidden sm:block">
+      {/* Mycelial Wave Background */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none overflow-hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="w-full h-full" preserveAspectRatio="none">
           <defs>
-            <linearGradient id="a" x1="0" x2="0" y1="0" y2="1">
+            <linearGradient id="mycelialGradient" x1="0" x2="0" y1="0" y2="1">
               <stop offset="0" stopColor="#87A878"/>
               <stop offset="1" stopColor="#496F5D"/>
             </linearGradient>
           </defs>
-          <path fill="url(#a)" d="M 0 50 Q 25 30 50 50 Q 75 70 100 50 L 100 100 L 0 100 Z" className="animate-[wave_15s_ease-in-out_infinite]"/>
-          <path fill="url(#a)" d="M 0 50 Q 25 70 50 50 Q 75 30 100 50 L 100 100 L 0 100 Z" className="animate-[wave_17s_ease-in-out_infinite]" opacity="0.5"/>
+          {/* Multiple wave paths for mycelial effect */}
+          <path fill="url(#mycelialGradient)" d="M 0 0 C 20 10, 40 0, 60 5 C 80 10, 100 0, 120 5 L 120 100 L 0 100 Z" className="animate-[wave_20s_ease-in-out_infinite]" opacity="0.3" />
+          <path fill="url(#mycelialGradient)" d="M 0 10 C 30 20, 70 5, 100 15 C 130 25, 160 15, 200 20 L 200 100 L 0 100 Z" className="animate-[wave_25s_ease-in-out_infinite]" opacity="0.2" />
+          <path fill="url(#mycelialGradient)" d="M 0 20 C 50 30, 90 15, 120 25 C 150 35, 180 25, 220 30 L 220 100 L 0 100 Z" className="animate-[wave_22s_ease-in-out_infinite]" opacity="0.15" />
+          <path fill="url(#mycelialGradient)" d="M -50 30 C 0 40, 40 25, 70 35 C 100 45, 130 35, 170 40 L 170 100 L -50 100 Z" className="animate-[wave_28s_ease-in-out_infinite]" opacity="0.1" />
         </svg>
       </div>
 
@@ -71,26 +73,6 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             Weaving technology and culture to foster open and connected communities
           </p>
-
-          {/* Newsletter Subscription Form */}
-          <div className="max-w-md mx-auto mt-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-            <form onSubmit={handleSubscribe} className="flex gap-2">
-              <Input 
-                type="email" 
-                name="email"
-                placeholder="Enter your email" 
-                required 
-                className="flex-1"
-              />
-              <Button type="submit">
-                <Send className="mr-2 h-4 w-4" />
-                Subscribe
-              </Button>
-            </form>
-            <p className="text-sm text-natural-earth/80 mt-2">
-              Join our newsletter for updates and insights
-            </p>
-          </div>
         </div>
       </section>
 
@@ -160,6 +142,34 @@ const Index = () => {
                 <p className="text-natural-earth">{item.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-24 bg-natural-sand/5">
+        <div className="max-w-xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-natural-leaf mb-6 opacity-0 animate-on-scroll">Stay Connected</h2>
+          <p className="text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
+            Join our newsletter to stay updated with our latest insights and community developments
+          </p>
+          <div className="opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+            <form onSubmit={handleSubscribe} className="flex gap-2">
+              <Input 
+                type="email" 
+                name="email"
+                placeholder="Enter your email" 
+                required 
+                className="flex-1"
+              />
+              <Button type="submit">
+                <Send className="mr-2 h-4 w-4" />
+                Subscribe
+              </Button>
+            </form>
+            <p className="text-sm text-natural-earth/80 mt-2">
+              Join our newsletter for updates and insights
+            </p>
           </div>
         </div>
       </section>
