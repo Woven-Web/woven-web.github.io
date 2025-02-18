@@ -1,7 +1,10 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Globe2, Users, Puzzle } from "lucide-react";
+import { Globe2, Users, Puzzle, Send } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 const Index = () => {
   useEffect(() => {
@@ -29,8 +32,33 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const email = new FormData(form).get("email") as string;
+    
+    // Redirect to Beehiiv subscription page
+    window.open(`https://wovenweb.beehiiv.com/subscribe?email=${encodeURIComponent(email)}`, '_blank');
+    toast.success("Redirecting to subscription page...");
+    form.reset();
+  };
+
   return (
     <div className="min-h-screen">
+      {/* Wave Background */}
+      <div className="fixed inset-0 z-0 opacity-20 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" className="hidden sm:block">
+          <defs>
+            <linearGradient id="a" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0" stopColor="#87A878"/>
+              <stop offset="1" stopColor="#496F5D"/>
+            </linearGradient>
+          </defs>
+          <path fill="url(#a)" d="M 0 50 Q 25 30 50 50 Q 75 70 100 50 L 100 100 L 0 100 Z" className="animate-[wave_15s_ease-in-out_infinite]"/>
+          <path fill="url(#a)" d="M 0 50 Q 25 70 50 50 Q 75 30 100 50 L 100 100 L 0 100 Z" className="animate-[wave_17s_ease-in-out_infinite]" opacity="0.5"/>
+        </svg>
+      </div>
+
       {/* Hero Section */}
       <section className="h-screen flex items-center justify-center bg-gradient-to-b from-natural-sage/10 to-transparent relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
@@ -43,6 +71,26 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             Weaving technology and culture to foster open and connected communities
           </p>
+
+          {/* Newsletter Subscription Form */}
+          <div className="max-w-md mx-auto mt-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+            <form onSubmit={handleSubscribe} className="flex gap-2">
+              <Input 
+                type="email" 
+                name="email"
+                placeholder="Enter your email" 
+                required 
+                className="flex-1"
+              />
+              <Button type="submit">
+                <Send className="mr-2 h-4 w-4" />
+                Subscribe
+              </Button>
+            </form>
+            <p className="text-sm text-natural-earth/80 mt-2">
+              Join our newsletter for updates and insights
+            </p>
+          </div>
         </div>
       </section>
 
