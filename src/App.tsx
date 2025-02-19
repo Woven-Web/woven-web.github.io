@@ -1,5 +1,6 @@
 
 import { Toaster } from "@/components/ui/toaster";
+import { MycelialBackground } from "./components/MycelialBackground";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -21,7 +22,13 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col relative">
+          <MycelialBackground 
+            color="#4a9eff"
+            density={1.0}
+            animationSpeed={0.5}
+            glowIntensity={0.55}
+          />
           <Navbar />
           <main className="flex-grow">
             <Routes>
