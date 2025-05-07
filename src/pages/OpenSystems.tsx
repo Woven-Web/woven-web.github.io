@@ -1,5 +1,6 @@
 
-import { Network, Code2, GitBranch } from "lucide-react";
+import { Network, Code2, GitBranch, Handshake } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const OpenSystems = () => {
   return (
@@ -48,6 +49,48 @@ const OpenSystems = () => {
               government. We are building technology that utilizes these distributed technologies and 
               that is also able to bridge to them as they become more ready and the ecosystem grows.
             </p>
+          </div>
+        </div>
+
+        {/* Partners Section */}
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-8">
+            <Handshake className="text-natural-sage" size={32} />
+            <h2 className="text-2xl font-semibold text-natural-leaf">
+              Our Partners
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-1 gap-8">
+            <Card className="bg-white overflow-hidden shadow-sm border-none">
+              <div className="md:flex">
+                <div className="md:w-1/3 bg-natural-leaf/5 flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <h3 className="text-xl font-semibold text-natural-leaf">Neighborhood Accelerator Program</h3>
+                    <a 
+                      href="https://nap.community/" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="text-natural-sage hover:text-natural-leaf transition-colors mt-2 inline-flex items-center"
+                    >
+                      nap.community
+                    </a>
+                  </div>
+                </div>
+                <CardContent className="md:w-2/3 p-6">
+                  <h4 className="font-medium text-natural-leaf mb-2">Fiscal Sponsorship & Technology Advisory</h4>
+                  <p className="text-natural-earth mb-4">
+                    We serve as a fiscal sponsor for the Neighborhood Accelerator Program and work closely with them to 
+                    identify and implement technologies that can best support neighborhoods in becoming more connected 
+                    and resilient.
+                  </p>
+                  <p className="text-natural-earth">
+                    Our collaboration focuses on understanding community needs and developing open systems that 
+                    facilitate stronger neighborhood connections and information sharing.
+                  </p>
+                </CardContent>
+              </div>
+            </Card>
           </div>
         </div>
 
