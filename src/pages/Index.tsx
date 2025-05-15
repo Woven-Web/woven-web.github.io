@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle, Lightbulb, MapPin } from "lucide-react";
@@ -43,9 +44,23 @@ const Index = () => {
           <p className="text-xl md:text-2xl text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             A Community research lab rooted in Boulder, CO
           </p>
-          <p className="text-lg md:text-xl text-natural-earth mb-12 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+          <p className="text-lg md:text-xl text-natural-earth mb-6 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
             Weaving culture & technology to foster open & connected communities
           </p>
+          
+          {/* Slim Subscribe Embed */}
+          <div className="mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.6s" }}>
+            <p className="text-natural-earth mb-3">Subscribe to the Weave</p>
+            <iframe 
+              src="https://embeds.beehiiv.com/07cac404-7618-4ef7-aaa6-0d7e669329ba?slim=true" 
+              data-test-id="beehiiv-embed" 
+              height="52" 
+              width="100%"
+              frameBorder="0" 
+              scrolling="no" 
+              style={{ margin: "0", borderRadius: "0px !important", backgroundColor: "transparent" }}
+            ></iframe>
+          </div>
         </div>
       </section>
 
@@ -166,18 +181,19 @@ const Index = () => {
           </div>
           <div className="rounded-lg overflow-hidden">
             <iframe 
-              src="https://embeds.beehiiv.com/df7620e6-9c24-4321-a4c3-b7dfa54dacac"
-              data-test-id="beehiiv-embed"
-              width="100%"
-              height="320"
+              src="https://embeds.beehiiv.com/07cac404-7618-4ef7-aaa6-0d7e669329ba" 
+              data-test-id="beehiiv-embed" 
+              width="100%" 
+              height="320" 
+              frameBorder="0" 
+              scrolling="no" 
               style={{
+                borderRadius: "4px",
                 border: "2px solid #e5e7eb",
-                borderRadius: "0.5rem",
+                margin: "0",
                 backgroundColor: "transparent"
               }}
-              frameBorder="0"
-              scrolling="no"
-            />
+            ></iframe>
           </div>
         </div>
       </section>
