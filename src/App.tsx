@@ -8,8 +8,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
-import RichCulture from "./pages/RichCulture";
-import OpenSystems from "./pages/OpenSystems";
+import Principles from "./pages/Principles";
+import Projects from "./pages/Projects";
+import Partnerships from "./pages/Partnerships";
 import JoinUs from "./pages/JoinUs";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
@@ -33,8 +34,9 @@ const App = () => (
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/rich-culture" element={<RichCulture />} />
-              <Route path="/open-systems" element={<OpenSystems />} />
+              <Route path="/principles" element={<Principles />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/partnerships" element={<Partnerships />} />
               <Route path="/join-us" element={<JoinUs />} />
               <Route path="/about" element={<About />} />
               <Route path="*" element={<NotFound />} />

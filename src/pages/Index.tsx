@@ -1,7 +1,7 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Globe2, Users, Puzzle } from "lucide-react";
+import { Globe2, Users, Puzzle, Lightbulb } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -41,34 +41,49 @@ const Index = () => {
             Woven Web
           </h1>
           <p className="text-xl md:text-2xl text-natural-earth mb-8 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-            Weaving technology and culture to foster open and connected communities
+            A Community research lab rooted in Boulder, CO
+          </p>
+          <p className="text-lg md:text-xl text-natural-earth mb-12 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+            Weaving culture & technology to foster open & connected communities
           </p>
         </div>
       </section>
 
-      {/* Pillars Section */}
+      {/* Vision Section */}
       <section className="py-24 bg-natural-sand/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-natural-leaf mb-4">Our Pillars</h2>
+            <h2 className="text-3xl font-bold text-natural-leaf mb-4">Our Vision</h2>
+            <p className="text-lg text-natural-earth max-w-3xl mx-auto">
+              We are a collaborative ecosystem exploring the intersection of community, technology, and regenerative practices.
+            </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            <Link to="/rich-culture" className="group">
+          <div className="grid md:grid-cols-3 gap-8">
+            <Link to="/principles" className="group">
               <div className="rounded-2xl bg-white p-8 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll">
                 <div className="text-natural-sage mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Users size={48} />
+                  <Lightbulb size={48} />
                 </div>
-                <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Rich Culture</h3>
-                <p className="text-natural-earth">Regenerative, Innovative, Cooperative, and Healthy</p>
+                <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Our Principles</h3>
+                <p className="text-natural-earth">Guided by nature, generosity, and collaborative connection</p>
               </div>
             </Link>
-            <Link to="/open-systems" className="group">
+            <Link to="/projects" className="group">
               <div className="rounded-2xl bg-white p-8 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
                 <div className="text-natural-sage mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Puzzle size={48} />
                 </div>
-                <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Open Systems</h3>
-                <p className="text-natural-earth">Developing technology for an open & connected society</p>
+                <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Our Projects</h3>
+                <p className="text-natural-earth">Building tools and platforms that empower communities</p>
+              </div>
+            </Link>
+            <Link to="/partnerships" className="group">
+              <div className="rounded-2xl bg-white p-8 shadow-sm hover:shadow-md transition-all duration-300 opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+                <div className="text-natural-sage mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Users size={48} />
+                </div>
+                <h3 className="text-2xl font-semibold text-natural-leaf mb-4">Our Partnerships</h3>
+                <p className="text-natural-earth">Collaborating with aligned organizations to create impact</p>
               </div>
             </Link>
           </div>

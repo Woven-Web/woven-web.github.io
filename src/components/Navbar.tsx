@@ -17,8 +17,9 @@ const Navbar = () => {
   }, []);
 
   const links = [
-    { name: "Rich Culture", path: "/rich-culture" },
-    { name: "Open Systems", path: "/open-systems" },
+    { name: "Principles", path: "/principles" },
+    { name: "Projects", path: "/projects" },
+    { name: "Partnerships", path: "/partnerships" },
     { name: "Join Us", path: "/join-us" },
     { name: "About", path: "/about" },
   ];

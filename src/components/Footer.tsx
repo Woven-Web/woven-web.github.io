@@ -4,8 +4,9 @@ import { Leaf, Globe2, Heart } from "lucide-react";
 
 const Footer = () => {
   const links = [
-    { name: "Rich Culture", path: "/rich-culture" },
-    { name: "Open Systems", path: "/open-systems" },
+    { name: "Principles", path: "/principles" },
+    { name: "Projects", path: "/projects" },
+    { name: "Partnerships", path: "/partnerships" },
     { name: "Join Us", path: "/join-us" },
     { name: "About", path: "/about" },
   ];
@@ -19,7 +20,7 @@ const Footer = () => {
               Woven Web
             </h3>
             <p className="text-natural-earth text-sm max-w-xs">
-              Weaving technology and culture to foster open and connected communities
+              A Community research lab rooted in Boulder, CO - Weaving culture & technology to foster open & connected communities
             </p>
           </div>
           
