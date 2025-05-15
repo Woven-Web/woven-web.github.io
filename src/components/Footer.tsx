@@ -7,7 +7,7 @@ const Footer = () => {
     { name: "Principles", path: "/principles" },
     { name: "Projects", path: "/projects" },
     { name: "Partnerships", path: "/partnerships" },
-    { name: "Map", path: "/map" },
+    { name: "Map", path: "/map.pdf", icon: MapPin, external: true },
     { name: "Join Us", path: "/join-us" },
     { name: "About", path: "/about" },
   ];
@@ -30,13 +30,24 @@ const Footer = () => {
             <ul className="space-y-2">
               {links.map((link) => (
                 <li key={link.path} className="flex items-center">
-                  {link.name === "Map" && <MapPin size={14} className="mr-1 text-natural-earth" />}
-                  <Link
-                    to={link.path}
-                    className="text-natural-earth hover:text-natural-leaf transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
+                  {link.icon && <link.icon size={14} className="mr-1 text-natural-earth" />}
+                  {link.external ? (
+                    <a
+                      href={link.path}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-natural-earth hover:text-natural-leaf transition-colors text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="text-natural-earth hover:text-natural-leaf transition-colors text-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

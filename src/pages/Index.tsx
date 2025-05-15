@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Globe2, Users, Puzzle, Lightbulb, MapPin } from "lucide-react";
@@ -140,11 +139,11 @@ const Index = () => {
             <p className="text-lg text-natural-earth max-w-3xl mx-auto mb-8">
               Explore our map of interconnected projects, partners, and initiatives that comprise our regenerative ecosystem.
             </p>
-            <Link to="/map">
+            <a href="/map.pdf" target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="mb-8 border-natural-sage text-natural-sage hover:bg-natural-sage hover:text-white">
                 <MapPin className="mr-2 h-4 w-4" /> View Full Map
               </Button>
-            </Link>
+            </a>
           </div>
           
           <div className="rounded-lg overflow-hidden shadow-lg bg-white">
