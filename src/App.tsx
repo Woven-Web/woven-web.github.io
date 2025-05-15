@@ -1,10 +1,11 @@
 
+import React from 'react'; // Added this line
 import { Toaster } from "@/components/ui/toaster";
 import { MycelialBackground } from "./components/MycelialBackground";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed Navigate as it's not used
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
@@ -60,8 +61,8 @@ const MapRedirect = () => {
   return (
     <div className="flex items-center justify-center min-h-[60vh] p-8">
       <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4">Opening Map...</h1>
-        <p className="mb-4">If the map doesn't open automatically, please click the button below:</p>
+        <h1 className="text-2xl font-bold mb-4 text-natural-charcoal">Opening Map...</h1>
+        <p className="mb-4 text-natural-earth">If the map doesn't open automatically, please click the button below:</p>
         <a 
           href="/map.pdf" 
           target="_blank" 
