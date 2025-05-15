@@ -1,7 +1,8 @@
 
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Globe2, Users, Puzzle, Lightbulb } from "lucide-react";
+import { Globe2, Users, Puzzle, Lightbulb, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   useEffect(() => {
@@ -131,8 +132,34 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
+      {/* Ecosystem Map Section */}
       <section className="py-24 bg-natural-sand/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-natural-leaf mb-4">Our Regenerative Ecosystem</h2>
+            <p className="text-lg text-natural-earth max-w-3xl mx-auto mb-8">
+              Explore our map of interconnected projects, partners, and initiatives that comprise our regenerative ecosystem.
+            </p>
+            <Link to="/map">
+              <Button variant="outline" className="mb-8 border-natural-sage text-natural-sage hover:bg-natural-sage hover:text-white">
+                <MapPin className="mr-2 h-4 w-4" /> View Full Map
+              </Button>
+            </Link>
+          </div>
+          
+          <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+            <iframe 
+              src="/map.pdf" 
+              className="w-full"
+              style={{height: "600px"}}
+              title="Woven Web Regenerative Ecosystem Map"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-24">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-natural-leaf mb-4">Stay Connected</h2>

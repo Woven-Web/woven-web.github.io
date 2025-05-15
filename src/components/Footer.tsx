@@ -1,12 +1,13 @@
 
 import { Link } from "react-router-dom";
-import { Leaf, Globe2, Heart } from "lucide-react";
+import { Leaf, Globe2, Heart, MapPin } from "lucide-react";
 
 const Footer = () => {
   const links = [
     { name: "Principles", path: "/principles" },
     { name: "Projects", path: "/projects" },
     { name: "Partnerships", path: "/partnerships" },
+    { name: "Map", path: "/map" },
     { name: "Join Us", path: "/join-us" },
     { name: "About", path: "/about" },
   ];
@@ -28,7 +29,8 @@ const Footer = () => {
             <h4 className="font-semibold text-natural-leaf mb-4">Navigation</h4>
             <ul className="space-y-2">
               {links.map((link) => (
-                <li key={link.path}>
+                <li key={link.path} className="flex items-center">
+                  {link.name === "Map" && <MapPin size={14} className="mr-1 text-natural-earth" />}
                   <Link
                     to={link.path}
                     className="text-natural-earth hover:text-natural-leaf transition-colors text-sm"

@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MapPin } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: "Principles", path: "/principles" },
     { name: "Projects", path: "/projects" },
     { name: "Partnerships", path: "/partnerships" },
+    { name: "Map", path: "/map", icon: MapPin },
     { name: "Join Us", path: "/join-us" },
     { name: "About", path: "/about" },
   ];
@@ -47,10 +48,11 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-natural-earth hover:text-natural-leaf transition-colors ${
+                className={`text-natural-earth hover:text-natural-leaf transition-colors flex items-center ${
                   location.pathname === link.path ? "font-semibold" : ""
                 }`}
               >
+                {link.icon && <link.icon size={16} className="mr-1" />}
                 {link.name}
               </Link>
             ))}
@@ -75,11 +77,12 @@ const Navbar = () => {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`block px-3 py-2 rounded-md text-natural-earth hover:text-natural-leaf transition-colors ${
+                  className={`block px-3 py-2 rounded-md text-natural-earth hover:text-natural-leaf transition-colors flex items-center ${
                     location.pathname === link.path ? "font-semibold" : ""
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
+                  {link.icon && <link.icon size={16} className="mr-2" />}
                   {link.name}
                 </Link>
               ))}
