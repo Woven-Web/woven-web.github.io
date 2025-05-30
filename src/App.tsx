@@ -41,6 +41,7 @@ const App = () => (
               <Route path="/join-us" element={<JoinUs />} />
               <Route path="/about" element={<About />} />
               <Route path="/map" element={<MapRedirect />} />
+              <Route path="/map.pdf" element={<MapRedirect />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
