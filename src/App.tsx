@@ -14,6 +14,7 @@ import Projects from "./pages/Projects";
 import Partnerships from "./pages/Partnerships";
 import JoinUs from "./pages/JoinUs";
 import About from "./pages/About";
+import Map from "./pages/Map";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -40,7 +41,7 @@ const App = () => (
               <Route path="/partnerships" element={<Partnerships />} />
               <Route path="/join-us" element={<JoinUs />} />
               <Route path="/about" element={<About />} />
-              <Route path="/map" element={<MapRedirect />} />
+              <Route path="/map" element={<Map />} />
               <Route path="/map.pdf" element={<MapRedirect />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
