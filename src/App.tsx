@@ -1,20 +1,10 @@
 
-import React from 'react'; // Added this line
 import { Toaster } from "@/components/ui/toaster";
-import { MycelialBackground } from "./components/MycelialBackground";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom"; // Removed Navigate as it's not used
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import Principles from "./pages/Principles";
-import Projects from "./pages/Projects";
-import Partnerships from "./pages/Partnerships";
-import JoinUs from "./pages/JoinUs";
-import About from "./pages/About";
-import Map from "./pages/Map";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,57 +15,21 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col relative">
-          <MycelialBackground 
-            color="#4a9eff"
-            density={1.0}
-            animationSpeed={0.5}
-            glowIntensity={0.55}
-          />
-          <Navbar />
+        <div className="min-h-screen flex flex-col relative bg-woven-cream">
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/principles" element={<Principles />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/partnerships" element={<Partnerships />} />
-              <Route path="/join-us" element={<JoinUs />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/map" element={<Map />} />
-              <Route path="/map.pdf" element={<MapRedirect />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
-          <Footer />
+          {/* Simple Footer */}
+          <footer className="py-8 text-center text-woven-earth/60 text-sm">
+            <p>Woven Web is a 501(c)(3) nonprofit based in Boulder, Colorado</p>
+          </footer>
         </div>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
-
-// Create a component that will handle the map redirect more gracefully
-const MapRedirect = () => {
-  React.useEffect(() => {
-    // Open the PDF in a new tab
-    window.open('/map.pdf', '_blank');
-  }, []);
-  
-  return (
-    <div className="flex items-center justify-center min-h-[60vh] p-8">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4 text-natural-charcoal">Opening Map...</h1>
-        <p className="mb-4 text-natural-earth">If the map doesn't open automatically, please click the button below:</p>
-        <a 
-          href="/map.pdf" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="inline-block px-4 py-2 bg-natural-leaf text-white rounded hover:bg-natural-sage transition-colors"
-        >
-          Open Map
-        </a>
-      </div>
-    </div>
-  );
-};
 
 export default App;

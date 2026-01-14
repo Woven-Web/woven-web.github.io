@@ -32,6 +32,13 @@ export default {
           sand: "#E1C699",
           leaf: "#496F5D",
         },
+        woven: {
+          deep: "#2d3a3a",
+          earth: "#5c6b6b",
+          warm: "#b8860b",
+          cream: "#f5f0e8",
+          mist: "#e8ebe8",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
